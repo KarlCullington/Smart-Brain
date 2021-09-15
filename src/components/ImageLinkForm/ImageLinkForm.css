@@ -1,0 +1,11 @@
+.form {
+    width: 700px;
+    z-index: 1;
+}
+
+/* background: linear-gradient(
+    to right,
+    rgba(57, 57, 58, 0.8),
+    rgba(98, 98, 100, 0.5),
+    rgba(57, 57, 58, 0.8)
+); */

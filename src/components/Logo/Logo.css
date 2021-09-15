@@ -1,0 +1,14 @@
+.Tilt {
+    background: radial-gradient(
+        circle,
+        rgb(35, 71, 253) 35%,
+        rgba(1, 1, 1, 0) 70%
+    );
+}
+.logoPosition {
+    margin: 30px;
+    margin-top: -40px;
+    width: 150px;
+    position: relative;
+    z-index: 1;
+}
