@@ -1,9 +1,9 @@
 import React from 'react';
 import './NavBar.css';
 
-const Navigation = () => {
-    return (
-        <div className='navBarWrapper'>
+const Navigation = ({ onRouteChange, isSignedIn }) => {
+    if (isSignedIn) {
+        return (
             <div
                 style={{
                     display: 'flex',
@@ -12,13 +12,39 @@ const Navigation = () => {
                     zIndex: '1',
                     height: '20px',
                 }}>
-                <p className='f3 link dim textColor pa3 mt1 mr3 pointer'>
+                <p
+                    onClick={() => onRouteChange('signout')}
+                    className='f3 link dim textColor pa3 mt1 mr3 pointer'>
                     {' '}
-                    Sign Out
+                    Sign Out{' '}
                 </p>
             </div>
-        </div>
-    );
+        );
+    } else {
+        return (
+            <div
+                style={{
+                    display: 'flex',
+                    justifyContent: 'flex-end',
+                    position: 'relative',
+                    zIndex: '1',
+                    height: '20px',
+                }}>
+                <p
+                    onClick={() => onRouteChange('signin')}
+                    className='f3 link dim textColor pa3 mt1 mr3 pointer'>
+                    {' '}
+                    Sign In{' '}
+                </p>
+                <p
+                    onClick={() => onRouteChange('register')}
+                    className='f3 link dim textColor pa3 mt1 mr3 pointer'>
+                    {' '}
+                    Register{' '}
+                </p>
+            </div>
+        );
+    }
 };
 
 export default Navigation;
